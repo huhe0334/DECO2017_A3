@@ -1,0 +1,91 @@
+@media screen and (min-width: 769px) {
+  .main {
+    background-color: #fff;
+    border-radius: 18px 18px 18px 18px;
+    padding: 55px 90px;
+    color: #3b446a;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .con {
+    font-size: 25px;
+  }
+  .el-dialog{
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    /* width: 88vw; */
+    padding: 6vw 8vw;
+    background: #ffffff;
+    border-radius: 2vw;
+    box-sizing: border-box;
+    margin: 4vw 0;
+    color: #3b446a;
+  }
+
+  .title {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+    text-align: center;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6vw;
+  }
+  .nav .l {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+  }
+  .nav .l img{
+    width: 4vw;
+    margin-right: 1vw;
+  }
+  .nav > span{
+    font-size: 2vw;
+  }
+  .el-dialog{
+    width: 80% !important;
+  }
+}
+
+
+.titles{
+  font-size: 3vw;
+}
+.dialogCon{
+  font-size: 2vw;
+}
+.dialogCon .tipss{
+  margin-bottom: 4vw;
+  margin-top: 1vw;
+}
+
+
+.setting{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 0;
+}
+.setting1{
+  border-top: 1px solid #3B446A;
+  border-bottom: 1px solid #3B446A;
+  margin-top: 4vw;
+}
+
+
+.dialogCon div p{
+  margin-bottom: 2vw;
+}
