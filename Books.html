@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <link rel="stylesheet" href="./css/common.css?v=1" />
+    <link rel="stylesheet" href="./css/book.css?v=1" />
+
+    <!-- External Style Sheets -->
+    <!-- <link href="./js/element.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div class="layout" id="app">
+      <div class="pc">
+        <!-- aside -->
+        <div class="aside" :class="{'hide': hide}">
+          <img src="./img/logo.png" class="logo" />
+
+          <div class="list">
+            <a href="./index.html" class="item">
+              <img src="./img/icon-1.png" />
+              <span>Dashboard</span>
+            </a>
+            <a href="./Books.html" class="item active">
+              <img :src="hide ? './img/icon-2.png' : './img/icon-2-1.png'" />
+              <span>Books</span>
+            </a>
+            <a href="./Calendar.html" class="item">
+              <img src="./img/icon-3.png" />
+              <span>Calendar</span>
+            </a>
+            <a href="./Tasks.html" class="item">
+              <img src="./img/icon-4.png" />
+              <span>Tasks</span>
+            </a>
+            <a href="./Timer.html" class="item">
+              <img src="./img/icon-5.png" />
+              <span>Timer</span>
+            </a>
+            <a class="item">
+              <img src="./img/icon-6.png" />
+              <span>Notification</span>
+            </a>
+            <a href="./Massage.html" class="item">
+              <img src="./img/icon-7.png" />
+              <span>Massage</span>
+            </a>
+
+            <div class="hr hr1"></div>
+            <div class="item">
+              <img src="./img/icon-8.png" />
+              <span>Setting</span>
+            </div>
+            <div class="hr"></div>
+          </div>
+
+          <img src="./img/icon-12.png" class="aside-bg" />
+
+          <img src="./img/icon-9.png" class="aside-bg1" />
+
+          <img src="./img/icon-11.png" class="fold" @click="hide = !hide" />
+        </div>
+
+        <!-- container -->
+        <div class="container">
+          <!-- header -->
+          <div class="header">
+            <!-- search -->
+            <div class="search">
+              <img src="./img/icon-5.png" />
+              <input type="text" placeholder="Course title or keywords " />
+              <div class="text">
+                <span>Courses</span>
+                <span>▼</span>
+              </div>
+            </div>
+
+            <!-- hello -->
+            <div class="hello">
+              <span> Hello, <b>Huanyi</b> </span>
+              <img src="./img/icon-13.png" />
+              <img src="./img/icon-14.png" />
+              <img src="./img/icon-15.png" />
+              <img src="./img/icon-16.png" />
+              <span> Huanyi H. </span>
+            </div>
+          </div>
+
+          <!-- main -->
+          <div class="main">
+            <div class="title">
+              <div>A Study on Understanding of UI and</div>
+              <div>UX, and Understanding of Design According to User</div>
+              <div>Interface Change</div>
+            </div>
+
+            <div class="con">
+              <span @click="fy">As</span> <span @click="fy">the</span>
+              <span @click="fy">Internet</span> <span @click="fy">of</span>
+              <span @click="fy">things,</span> <span @click="fy">mobile,</span>
+              <span @click="fy">and</span> <span @click="fy">cloud</span>
+              <span @click="fy">computing</span>
+              <span @click="fy">technologies</span>
+              <span @click="fy">have</span> <span @click="fy">evolved,</span>
+              <span @click="fy">interface</span>
+              <span @click="fy">technologies</span>
+              <span @click="fy">have</span> <span @click="fy">evolved</span>
+              <span @click="fy">into</span> <span @click="fy">CUI,</span>
+              <span @click="fy">GUI,</span> <span @click="fy">and</span>
+              <span @click="fy">NUI,</span> <span @click="fy">and</span>
+              <span @click="fy">another</span> <span @click="fy">form</span>
+              <span @click="fy">of</span> <span @click="fy">UI/UX</span>
+              <span @click="fy">is</span> <span @click="fy">expected</span>
+              <span @click="fy">to</span> <span @click="fy">be</span>
+              <span @click="fy">developed</span> <span @click="fy">in</span>
+              <span @click="fy">the</span> <span @click="fy">future.</span>
+              <span @click="fy">In</span> <span @click="fy">this</span>
+              <span @click="fy">study,</span> <span @click="fy">we</span>
+              <span @click="fy">showed</span> <span @click="fy">the</span>
+              <span @click="fy">understanding</span>
+              <span @click="fy">and</span> <span @click="fy">production</span>
+              <span @click="fy">ability</span> <span @click="fy">of</span>
+              <span @click="fy">the</span> <span @click="fy">interface</span>
+              <span @click="fy">of</span> <span @click="fy">the</span>
+              <span @click="fy">internet,</span>
+              <span @click="fy">operating</span>
+              <span @click="fy">system,</span>
+              <span @click="fy">contents,</span> <span @click="fy">and</span>
+              <span @click="fy">devices.</span> <span @click="fy">This</span>
+              <span @click="fy">study</span> <span @click="fy">aimed</span>
+              <span @click="fy">to</span> <span @click="fy">make</span>
+              <span @click="fy">a</span> <span @click="fy">list</span>
+              <span @click="fy">of</span> <span @click="fy">18</span>
+              <span @click="fy">items</span> <span @click="fy">in</span>
+              <span @click="fy">4</span> <span @click="fy">areas</span>
+              <span @click="fy">for</span> <span @click="fy">basic</span>
+              <span @click="fy">knowledge</span> <span @click="fy">of</span>
+              <span @click="fy">UI/UX,</span> <span @click="fy">the</span>
+              <span @click="fy">establishment</span>
+              <span @click="fy">of</span> <span @click="fy">design</span>
+              <span @click="fy">research,</span>
+              <span @click="fy">design</span> <span @click="fy">concept,</span>
+              <span @click="fy">and</span> <span @click="fy">design</span>
+              <span @click="fy">production</span> <span @click="fy">for</span>
+              <span @click="fy">29</span> <span @click="fy">sophomore,</span>
+              <span @click="fy">junior</span> <span @click="fy">and</span>
+              <span @click="fy">senior</span> <span @click="fy">students</span>
+              <span @click="fy">in</span> <span @click="fy">IT</span>
+              <span @click="fy">departments,</span>
+              <span @click="fy">and</span> <span @click="fy">the</span>
+              <span @click="fy">results</span> <span @click="fy">of</span>
+              <span @click="fy">understanding</span>
+              <span @click="fy">were</span> <span @click="fy">divided</span>
+              <span @click="fy">into</span> <span @click="fy">three</span>
+              <span @click="fy">groups</span> <span @click="fy">of</span>
+              <span @click="fy">excellent,</span>
+              <span @click="fy">normal,</span> <span @click="fy">and</span>
+              <span @click="fy">insufficient</span>
+              <span @click="fy">and</span> <span @click="fy">evaluated.</span>
+              <span @click="fy">It</span> <span @click="fy">was</span>
+              <span @click="fy">found</span> <span @click="fy">that</span>
+              <span @click="fy">excellent</span> <span @click="fy">was</span>
+              <span @click="fy">19.35%,</span> <span @click="fy">the</span>
+              <span @click="fy">average</span> <span @click="fy">was</span>
+              <span @click="fy">42.53%</span> <span @click="fy">and</span>
+              <span @click="fy">insufficient</span>
+              <span @click="fy">was</span> <span @click="fy">38.12%.</span>
+              <span @click="fy">Therefore,</span> <span @click="fy">20%</span>
+              <span @click="fy">of</span> <span @click="fy">the</span>
+              <span @click="fy">students</span>
+              <span @click="fy">understood</span>
+              <span @click="fy">UI/UX,</span> <span @click="fy">and</span>
+              <span @click="fy">80%</span> <span @click="fy">of</span>
+              <span @click="fy">students</span> <span @click="fy">did</span>
+              <span @click="fy">not</span> <span @click="fy">understand</span>
+              <span @click="fy">UI/UX</span> <span @click="fy">well.</span>
+
+              <div style="margin: 30px 0">
+                <span @click="fy">In</span>
+                <span @click="fy">particular,</span>
+                <span @click="fy">in</span> <span @click="fy">the</span>
+                <span @click="fy">comparative</span>
+                <span @click="fy">analysis</span> <span @click="fy">of</span>
+                <span @click="fy">four</span> <span @click="fy">areas,</span>
+                <span @click="fy">the</span> <span @click="fy">design</span>
+                <span @click="fy">research</span> <span @click="fy">area</span>
+                <span @click="fy">was</span> <span @click="fy">41</span>
+                <span @click="fy">points,</span> <span @click="fy">the</span>
+                <span @click="fy">design</span>
+                <span @click="fy">content</span> <span @click="fy">area</span>
+                <span @click="fy">was</span> <span @click="fy">43</span>
+                <span @click="fy">points,</span> <span @click="fy">and</span>
+                <span @click="fy">the</span> <span @click="fy">design</span>
+                <span @click="fy">production</span>
+                <span @click="fy">area</span> <span @click="fy">was</span>
+                <span @click="fy">16</span> <span @click="fy">points</span>
+                <span @click="fy">which</span> <span @click="fy">were</span>
+                <span @click="fy">found</span> <span @click="fy">to</span>
+                <span @click="fy">be</span> <span @click="fy">the</span>
+                <span @click="fy">lowest.</span> <span @click="fy">Next,</span>
+                <span @click="fy">the</span> <span @click="fy">10</span>
+                <span @click="fy">evaluation</span>
+                <span @click="fy">items</span> <span @click="fy">in</span>
+                <span @click="fy">the</span> <span @click="fy">mobile</span>
+                <span @click="fy">UI/UX</span> <span @click="fy">build</span>
+                <span @click="fy">guide</span>
+                <span @click="fy">evaluation</span>
+                <span @click="fy">were</span>
+                <span @click="fy">evaluated</span> <span @click="fy">in</span>
+                <span @click="fy">the</span> <span @click="fy">same</span>
+                <span @click="fy">way</span> <span @click="fy">as</span>
+                <span @click="fy">the</span> <span @click="fy">UI/UX</span>
+                <span @click="fy">understanding,</span>
+                <span @click="fy">the</span> <span @click="fy">excellent</span>
+                <span @click="fy">score</span> <span @click="fy">was</span>
+                <span @click="fy">16</span> <span @click="fy">points,</span>
+                <span @click="fy">the</span> <span @click="fy">average</span>
+                <span @click="fy">score</span> <span @click="fy">was</span>
+                <span @click="fy">80</span> <span @click="fy">points</span>
+                <span @click="fy">and</span> <span @click="fy">the</span>
+                <span @click="fy">poor</span> <span @click="fy">score</span>
+                <span @click="fy">was</span> <span @click="fy">194</span>
+                <span @click="fy">points.</span> <span @click="fy">The</span>
+                <span @click="fy">UI/UX</span> <span @click="fy">build</span>
+                <span @click="fy">guides</span> <span @click="fy">showed</span>
+                <span @click="fy">worse</span>
+                <span @click="fy">evaluation</span>
+                <span @click="fy">than</span> <span @click="fy">UI/UX</span>
+                <span @click="fy">understanding.</span>
+              </div>
+
+              <span @click="fy">Therefore,</span> <span @click="fy">to</span>
+              <span @click="fy">cultivate</span> <span @click="fy">UI/UX</span>
+              <span @click="fy">understanding</span>
+              <span @click="fy">and</span> <span @click="fy">content</span>
+              <span @click="fy">production</span>
+              <span @click="fy">ability,</span> <span @click="fy">UI/UX</span>
+              <span @click="fy">experts</span> <span @click="fy">should</span>
+              <span @click="fy">be</span> <span @click="fy">fostered</span>
+              <span @click="fy">with</span>
+              <span @click="fy">professional</span>
+              <span @click="fy">course</span>
+              <span @click="fy">organization</span>
+              <span @click="fy">and</span> <span @click="fy">a</span>
+              <span @click="fy">systematic</span>
+              <span @click="fy">curriculum.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="header">
+          <img src="./img/icon-32.png" alt="" srcset="" @click="hide = true" />
+          <img src="./img/logo.png" alt="" srcset="" />
+          <img src="./img/icon-45.png" alt="" srcset="" />
+        </div>
+
+        <div class="headers" v-if="hide">
+          <div class="top">
+            <img
+              src="./img/icon-44.png"
+              alt=""
+              srcset=""
+              @click="hide = false"
+            />
+            <img src="./img/icon-46.png" alt="" srcset="" />
+            <img src="./img/icon-47.png" alt="" srcset="" />
+          </div>
+          <div class="con">
+            <div>
+              <a href="./index.html" class="item"
+                ><img src="./img/icon-48.png" alt="" srcset=""
+              /></a>
+              <a href="./Books.html" class="item"
+                ><img src="./img/icon-49.png" alt="" srcset=""
+              /></a>
+              <a href="./Calendar.html" class="item"
+                ><img src="./img/icon-50.png" alt="" srcset=""
+              /></a>
+            </div>
+            <div>
+              <a href="./Tasks.html" class="item"
+                ><img src="./img/icon-51.png" alt="" srcset=""
+              /></a>
+              <a href="./Timer.html" class="item"
+                ><img src="./img/icon-52.png" alt="" srcset=""
+              /></a>
+              <img src="./img/icon-53.png" alt="" srcset="" />
+            </div>
+            <div>
+              <a href="./Massage.html" class="item"
+                ><img src="./img/icon-54.png" alt="" srcset=""
+              /></a>
+
+              <p class="search">
+                <input type="text" />
+                <img src="./img/icon-55.png" alt="" srcset="" />
+              </p>
+            </div>
+            <div class="qw">
+              <img src="./img/icon-56.png" alt="" srcset="" />
+              <img src="./img/icon-57.png" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="nav">
+          <div class="l">
+            <img src="./img/icon-2.png" alt="" srcset="" />
+            <span>Books</span>
+          </div>
+
+          <span>More</span>
+        </div>
+        <div class="main">
+          <div class="title">
+            <div>A Study on Understanding of UI</div>
+            <div>and UX, and Understanding of</div>
+            <div>Design According to User</div>
+            <div>Interface Change</div>
+          </div>
+
+          <div class="con">
+            <span @click="fy">As</span> <span @click="fy">the</span>
+            <span @click="fy">Internet</span> <span @click="fy">of</span>
+            <span @click="fy">things,</span> <span @click="fy">mobile,</span>
+            <span @click="fy">and</span> <span @click="fy">cloud</span>
+            <span @click="fy">computing</span>
+            <span @click="fy">technologies</span> <span @click="fy">have</span>
+            <span @click="fy">evolved,</span>
+            <span @click="fy">interface</span>
+            <span @click="fy">technologies</span> <span @click="fy">have</span>
+            <span @click="fy">evolved</span> <span @click="fy">into</span>
+            <span @click="fy">CUI,</span> <span @click="fy">GUI,</span>
+            <span @click="fy">and</span> <span @click="fy">NUI,</span>
+            <span @click="fy">and</span> <span @click="fy">another</span>
+            <span @click="fy">form</span> <span @click="fy">of</span>
+            <span @click="fy">UI/UX</span> <span @click="fy">is</span>
+            <span @click="fy">expected</span> <span @click="fy">to</span>
+            <span @click="fy">be</span> <span @click="fy">developed</span>
+            <span @click="fy">in</span> <span @click="fy">the</span>
+            <span @click="fy">future.</span> <span @click="fy">In</span>
+            <span @click="fy">this</span> <span @click="fy">study,</span>
+            <span @click="fy">we</span> <span @click="fy">showed</span>
+            <span @click="fy">the</span> <span @click="fy">understanding</span>
+            <span @click="fy">and</span> <span @click="fy">production</span>
+            <span @click="fy">ability</span> <span @click="fy">of</span>
+            <span @click="fy">the</span> <span @click="fy">interface</span>
+            <span @click="fy">of</span> <span @click="fy">the</span>
+            <span @click="fy">internet,</span>
+            <span @click="fy">operating</span> <span @click="fy">system,</span>
+            <span @click="fy">contents,</span> <span @click="fy">and</span>
+            <span @click="fy">devices.</span> <span @click="fy">This</span>
+            <span @click="fy">study</span> <span @click="fy">aimed</span>
+            <span @click="fy">to</span> <span @click="fy">make</span>
+            <span @click="fy">a</span> <span @click="fy">list</span>
+            <span @click="fy">of</span> <span @click="fy">18</span>
+            <span @click="fy">items</span> <span @click="fy">in</span>
+            <span @click="fy">4</span> <span @click="fy">areas</span>
+            <span @click="fy">for</span> <span @click="fy">basic</span>
+            <span @click="fy">knowledge</span> <span @click="fy">of</span>
+            <span @click="fy">UI/UX,</span> <span @click="fy">the</span>
+            <span @click="fy">establishment</span> <span @click="fy">of</span>
+            <span @click="fy">design</span> <span @click="fy">research,</span>
+            <span @click="fy">design</span> <span @click="fy">concept,</span>
+            <span @click="fy">and</span> <span @click="fy">design</span>
+            <span @click="fy">production</span> <span @click="fy">for</span>
+            <span @click="fy">29</span> <span @click="fy">sophomore,</span>
+            <span @click="fy">junior</span> <span @click="fy">and</span>
+            <span @click="fy">senior</span> <span @click="fy">students</span>
+            <span @click="fy">in</span> <span @click="fy">IT</span>
+            <span @click="fy">departments,</span> <span @click="fy">and</span>
+            <span @click="fy">the</span> <span @click="fy">results</span>
+            <span @click="fy">of</span> <span @click="fy">understanding</span>
+            <span @click="fy">were</span> <span @click="fy">divided</span>
+            <span @click="fy">into</span> <span @click="fy">three</span>
+            <span @click="fy">groups</span> <span @click="fy">of</span>
+            <span @click="fy">excellent,</span>
+            <span @click="fy">normal,</span> <span @click="fy">and</span>
+            <span @click="fy">insufficient</span> <span @click="fy">and</span>
+            <span @click="fy">evaluated.</span> <span @click="fy">It</span>
+            <span @click="fy">was</span> <span @click="fy">found</span>
+            <span @click="fy">that</span> <span @click="fy">excellent</span>
+            <span @click="fy">was</span> <span @click="fy">19.35%,</span>
+            <span @click="fy">the</span> <span @click="fy">average</span>
+            <span @click="fy">was</span> <span @click="fy">42.53%</span>
+            <span @click="fy">and</span> <span @click="fy">insufficient</span>
+            <span @click="fy">was</span> <span @click="fy">38.12%.</span>
+            <span @click="fy">Therefore,</span> <span @click="fy">20%</span>
+            <span @click="fy">of</span> <span @click="fy">the</span>
+            <span @click="fy">students</span>
+            <span @click="fy">understood</span> <span @click="fy">UI/UX,</span>
+            <span @click="fy">and</span> <span @click="fy">80%</span>
+            <span @click="fy">of</span> <span @click="fy">students</span>
+            <span @click="fy">did</span> <span @click="fy">not</span>
+            <span @click="fy">understand</span> <span @click="fy">UI/UX</span>
+            <span @click="fy">well.</span>
+
+            <div style="margin: 30px 0">
+              <span @click="fy">In</span>
+              <span @click="fy">particular,</span> <span @click="fy">in</span>
+              <span @click="fy">the</span> <span @click="fy">comparative</span>
+              <span @click="fy">analysis</span> <span @click="fy">of</span>
+              <span @click="fy">four</span> <span @click="fy">areas,</span>
+              <span @click="fy">the</span> <span @click="fy">design</span>
+              <span @click="fy">research</span> <span @click="fy">area</span>
+              <span @click="fy">was</span> <span @click="fy">41</span>
+              <span @click="fy">points,</span> <span @click="fy">the</span>
+              <span @click="fy">design</span> <span @click="fy">content</span>
+              <span @click="fy">area</span> <span @click="fy">was</span>
+              <span @click="fy">43</span> <span @click="fy">points,</span>
+              <span @click="fy">and</span> <span @click="fy">the</span>
+              <span @click="fy">design</span>
+              <span @click="fy">production</span> <span @click="fy">area</span>
+              <span @click="fy">was</span> <span @click="fy">16</span>
+              <span @click="fy">points</span> <span @click="fy">which</span>
+              <span @click="fy">were</span> <span @click="fy">found</span>
+              <span @click="fy">to</span> <span @click="fy">be</span>
+              <span @click="fy">the</span> <span @click="fy">lowest.</span>
+              <span @click="fy">Next,</span> <span @click="fy">the</span>
+              <span @click="fy">10</span> <span @click="fy">evaluation</span>
+              <span @click="fy">items</span> <span @click="fy">in</span>
+              <span @click="fy">the</span> <span @click="fy">mobile</span>
+              <span @click="fy">UI/UX</span> <span @click="fy">build</span>
+              <span @click="fy">guide</span>
+              <span @click="fy">evaluation</span> <span @click="fy">were</span>
+              <span @click="fy">evaluated</span> <span @click="fy">in</span>
+              <span @click="fy">the</span> <span @click="fy">same</span>
+              <span @click="fy">way</span> <span @click="fy">as</span>
+              <span @click="fy">the</span> <span @click="fy">UI/UX</span>
+              <span @click="fy">understanding,</span>
+              <span @click="fy">the</span> <span @click="fy">excellent</span>
+              <span @click="fy">score</span> <span @click="fy">was</span>
+              <span @click="fy">16</span> <span @click="fy">points,</span>
+              <span @click="fy">the</span> <span @click="fy">average</span>
+              <span @click="fy">score</span> <span @click="fy">was</span>
+              <span @click="fy">80</span> <span @click="fy">points</span>
+              <span @click="fy">and</span> <span @click="fy">the</span>
+              <span @click="fy">poor</span> <span @click="fy">score</span>
+              <span @click="fy">was</span> <span @click="fy">194</span>
+              <span @click="fy">points.</span> <span @click="fy">The</span>
+              <span @click="fy">UI/UX</span> <span @click="fy">build</span>
+              <span @click="fy">guides</span> <span @click="fy">showed</span>
+              <span @click="fy">worse</span>
+              <span @click="fy">evaluation</span> <span @click="fy">than</span>
+              <span @click="fy">UI/UX</span>
+              <span @click="fy">understanding.</span>
+            </div>
+
+            <span @click="fy">Therefore,</span> <span @click="fy">to</span>
+            <span @click="fy">cultivate</span> <span @click="fy">UI/UX</span>
+            <span @click="fy">understanding</span> <span @click="fy">and</span>
+            <span @click="fy">content</span>
+            <span @click="fy">production</span>
+            <span @click="fy">ability,</span> <span @click="fy">UI/UX</span>
+            <span @click="fy">experts</span> <span @click="fy">should</span>
+            <span @click="fy">be</span> <span @click="fy">fostered</span>
+            <span @click="fy">with</span> <span @click="fy">professional</span>
+            <span @click="fy">course</span>
+            <span @click="fy">organization</span> <span @click="fy">and</span>
+            <span @click="fy">a</span> <span @click="fy">systematic</span>
+            <span @click="fy">curriculum.</span>
+          </div>
+        </div>
+      </div>
+
+      <el-dialog :visible.sync="dialogVisible" width="30%">
+        <div class="dialogCon">
+          <p class="titles">Dictionary</p>
+          <p class="tipss">{{tipss}}</p>
+          <div>
+            <p v-for="(v, index) in list">{{index+1}}、{{v.definition}}</p>
+          </div>
+          <p class="setting setting1">
+            <span>Open Dictionary</span>
+            <i class="el-icon-notebook-1"></i>
+          </p>
+          <p class="setting">
+            <span>Setting</span>
+            <i class="el-icon-setting"></i>
+          </p>
+        </div>
+      </el-dialog>
+    </div>
+
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入element 的组件库-->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <script src="//unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+
+    <script>
+      ELEMENT.locale(ELEMENT.lang.en);
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          hide: false,
+          value: new Date(),
+          dialogFormVisible: false,
+          form: {
+            task: "",
+            time: "",
+          },
+          formLabelWidth: "120px",
+          tipss: "tipss",
+          list: [],
+          dialogVisible: false,
+        },
+        methods: {
+          fy(e) {
+            let tipss = e.target.innerText.replaceAll(',', '').replaceAll('%', '');
+            fetch(
+              `https://api.dictionaryapi.dev/api/v2/entries/en/${tipss}`
+            ).then((res) => {
+              res.json().then((data) => {
+                this.dialogVisible = true;
+                this.tipss = tipss;
+                this.list = data[0].meanings[0].definitions.slice(0, 2);
+              });
+            });
+          },
+          // https://api.dictionaryapi.dev/api/v2/entries/en/red
+        },
+      });
+    </script>
+  </body>
+</html>
