@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="./css/common.css?v=1" />
+    <link rel="stylesheet" href="./css/tasks.css?v=1" />
+
+    <!-- External Style Sheets -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+    <!-- layout -->
+    <div class="layout" id="app">
+
+        <div class="pc">
+
+            <!-- aside -->
+            <div class="aside" :class="{'hide': hide}">
+                <img src="./img/logo.png" class="logo" />
+
+                <div class="list">
+                    <a href="./index.html" class="item">
+                        <img src="./img/icon-1.png" />
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="./Books.html" class="item">
+                        <img src="./img/icon-2.png" />
+                        <span>Books</span>
+                    </a>
+                    <a href="./Calendar.html" class="item">
+                        <img src="./img/icon-3.png" />
+                        <span>Calendar</span>
+                    </a>
+                    <a href="./Tasks.html" class="item active">
+                        <img :src="hide ? './img/icon-4.png' : './img/icon-4-1.png'" />
+                        <span>Tasks</span>
+                    </a>
+                    <a href="./Timer.html" class="item">
+                        <img src="./img/icon-5.png" />
+                        <span>Timer</span>
+                    </a>
+                    <a class="item">
+                        <img src="./img/icon-6.png" />
+                        <span>Notification</span>
+                    </a>
+                    <a href="./Message.html" class="item">
+                        <img src="./img/icon-7.png" />
+                        <span>Message</span>
+                    </a>
+
+                    <div class="hr hr1"></div>
+                    <div class="item">
+                        <img src="./img/icon-8.png" />
+                        <span>Setting</span>
+                    </div>
+                    <div class="hr"></div>
+                </div>
+
+                <img src="./img/icon-12.png" class="aside-bg" />
+
+                <img src="./img/icon-9.png" class="aside-bg1" />
+
+                <img src="./img/icon-11.png" class="fold" @click="hide = !hide" />
+            </div>
+
+            <!-- container -->
+            <div class="container">
+                <!-- header -->
+                <div class="header">
+                    <!-- search -->
+                    <div class="search">
+                        <img src="./img/icon-5.png" />
+                        <input type="text" placeholder="Course title or keywords " />
+                        <div class="text">
+                            <span>Tasks</span>
+                            <span>▼</span>
+                        </div>
+                    </div>
+
+                    <!-- hello -->
+                    <div class="hello">
+                        <span> Hello, <b>Huanyi</b> </span>
+                        <img src="./img/icon-13.png" />
+                        <img src="./img/icon-14.png" />
+                        <img src="./img/icon-15.png" />
+                        <img src="./img/icon-16.png" />
+                        <span> Huanyi H. </span>
+                    </div>
+                </div>
+
+                <!-- main -->
+                <div class="main">
+
+                    <!-- .top -->
+                    <div class="top">
+                        <span>Show By Statistic</span>
+                        <span>Show By Statistic</span>
+                        <p class="flex"></p>
+
+                        <div class="search">
+                            <input type="text" placeholder="Search for Assignment">
+                            <img src="./img/icon-5.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- con -->
+                    <div class="con">
+                        <div v-for="v in tabss">
+                            <div class="title">{{v.title}}</div>
+                            <div class="list">
+                                <div class="item" v-for="b in v.list">
+                                    <div>
+                                        <el-tag :type="b.type">{{b.status}}</el-tag>
+                                    </div>
+                                    <div class="a">{{b.a}}</div>
+                                    <div class="b">{{b.b}}</div>
+                                    <div class="c">{{b.c}}</div>
+
+                                    <div class="d">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phone as">
+            <div class="header">
+                <img src="./img/icon-32.png" alt="" srcset="" @click="hide = true" />
+                <img src="./img/logo.png" alt="" srcset="" />
+                <img src="./img/icon-45.png" alt="" srcset="" />
+            </div>
+
+            <div class="headers" v-if="hide">
+                <div class="top">
+                    <img src="./img/icon-44.png" alt="" srcset="" @click="hide = false" />
+                    <img src="./img/icon-46.png" alt="" srcset="" />
+                    <img src="./img/icon-47.png" alt="" srcset="" />
+                </div>
+                <div class="con">
+                    <div>
+                        <a href="./index.html" class="item"><img src="./img/icon-48.png" alt="" srcset="" /></a>
+                        <a href="./Books.html" class="item"><img src="./img/icon-49.png" alt="" srcset="" /></a>
+                        <a href="./Calendar.html" class="item"><img src="./img/icon-50.png" alt="" srcset="" /></a>
+                    </div>
+                    <div>
+                        <a href="./Tasks.html" class="item"><img src="./img/icon-51.png" alt="" srcset="" /></a>
+                        <a href="./Timer.html" class="item"><img src="./img/icon-52.png" alt="" srcset="" /></a>
+                        <img src="./img/icon-53.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <a href="./Message.html" class="item"><img src="./img/icon-54.png" alt="" srcset="" /></a>
+
+                        <p class="search">
+                            <input type="text" />
+                            <img src="./img/icon-55.png" alt="" srcset="" />
+                        </p>
+                    </div>
+                    <div class="qw">
+                        <img src="./img/icon-56.png" alt="" srcset="" />
+                        <img src="./img/icon-57.png" alt="" srcset="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- .top -->
+            <div class="top">
+                <span>Show By Statistic</span>
+                <span>Show By Statistic</span>
+                <p class="flex"></p>
+
+                <div class="search">
+                    <input type="text" placeholder="Search for Assignment">
+                    <img src="./img/icon-5.png" alt="">
+                </div>
+            </div>
+            
+            <div class="con">
+                <div v-for="v in tabss.slice(0, 1)">
+                    <el-tooltip popper-class="tooltip" effect="dark" placement="bottom-start">
+                        <div class="title">{{v.title}}</div>
+                        <div slot="content">
+                            <p>User Experience Design Studio</p>
+                            <p>Advanced Web Design</p>
+                          </div>
+                    </el-tooltip>
+                    <div class="list">
+                        <div class="item" v-for="b in v.list">
+                            <div>
+                                <el-tag :type="b.type">{{b.status}}</el-tag>
+                            </div>
+                            <div class="a">{{b.a}}</div>
+                            <div class="b">{{b.b}}</div>
+                            <div class="c">{{b.c}}</div>
+
+                            <div class="d">Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Must import vue first, then use element-ui -->
+    <script src="./js/vue.js"></script>
+    <!-- Import element repository-->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="//unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+
+    <script>
+        ELEMENT.locale(ELEMENT.lang.en)
+        var app = new Vue({
+            el: "#app",
+            data: {
+                hide: false,
+                tabs: [
+                    {
+                        title: 'Design Programming',
+                        list: [
+                            {
+                                a: 'Week 2: Creative Quiz [A2]',
+                                b: 'Available until Apr 14 at 23:59 | Due Apr 14 at 23:59',
+                                c: '-/200 pts | Not Yet Garded',
+                                startTime: '2022-04-14 23:59',
+                                endTime: '2022-04-14 23:59'
+                            },
+                            {
+                                a: 'Week 13: Interactive Artwork [A3]',
+                                b: 'Not available until Apr 29 at 13:00 | Due May 29 at 23:59',
+                                c: '-/300 pts',
+                                startTime: '2022-04-29 13:00',
+                                endTime: '2022-05-29 23:59'
+                            },
+                            {
+                                a: 'Week 5: Coding Quiz [A1.D]',
+                                b: 'Closed | Due Mar 31 at 23:59',
+                                c: '10/15 pts'
+                            },
+                            {
+                                a: 'Week 4: Coding Quiz [A1.C]',
+                                b: 'Closed | Due Mar 24 at 23:59',
+                                c: '13/15 pts'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'User Experience Design Studio',
+                        list: [
+                            {
+                                a: 'Design Brief',
+                                b: 'Not available until Apr 20 at 23:59 | Due Apr 26 at 21:00',
+                                c: '-/30 pts',
+                                startTime: '2022-04-20 23:59',
+                                endTime: '2022-04-26 21:00'
+                            },
+                            {
+                                a: 'Storyboards',
+                                b: 'Not available until Apr 20 at 23:59 | Due Apr 26 at 21:00',
+                                c: '-/300 pts',
+                                startTime: '2022-04-20 23:59',
+                                endTime: '2022-04-26 21:00'
+                            },
+                            {
+                                a: 'Assessment 4: User experience & Touchpoint',
+                                b: 'Not available until May 18 at 21:00 | Due May 24 at 21:00',
+                                c: '-/40 pts',
+                                startTime: '2022-05-18 21:00',
+                                endTime: '2022-05-24 21:00'
+                            },
+                            {
+                                a: 'Assessment 5: Presentation',
+                                b: 'Not available until May 19 at 23:59 | Due May 25 at 12:00',
+                                c: '-/10 pts',
+                                startTime: '2022-05-19 23:59',
+                                endTime: '2022-05-25 12:00'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Advanced Web Design',
+                        list: [
+                            {
+                                a: 'Web App Pitch',
+                                b: 'Due Apr 15 at 23:59 ',
+                                c: '-/40 pts',
+                                endTime: '2022-04-15 23:59'
+                            },
+                            {
+                                a: 'Web App Prototype',
+                                b: 'Due May 27 at 23:59',
+                                c: '-/40 pts',
+                                endTime: '2022-05-27 23:59'
+                            },
+                            {
+                                a: 'JavaScript Challenges Repl.it Submission',
+                                b: 'Due Mar 18 at 23:59',
+                                c: '10/10 pts',
+                                endTime: '2022-03-18 23:59'
+                            },
+                            {
+                                a: 'JavaScript Quiz',
+                                b: 'Due Mar 18 at 23:59 Mar 18 at 23:59',
+                                c: '10/10 pts',
+                                endTime: '2022-03-18 23:59'
+                            }
+                        ]
+                    }
+                ],
+            },
+            mounted() {
+
+            },
+            computed: {
+                tabss() {
+                    let tabs = this.tabs;
+                    tabs.forEach(v => {
+                        v.list.forEach(m => {
+                            m.status = 'Completed'
+                            if (m.startTime) {
+                                if (new Date() > new Date(m.startTime)) {
+                                    m.type = 'success'
+                                    m.status = 'Progressing'
+                                } else {
+                                    m.type = 'danger'
+                                    m.status = 'Not Start'
+                                }
+                            }
+                            if (m.endTime) {
+                                if (new Date() > new Date(m.endTime)) {
+                                    m.type = ''
+                                    m.status = 'Completed'
+                                } else {
+                                    if (m.startTime) {
+                                        if (new Date() > new Date(m.startTime)) {
+                                            m.type = 'success'
+                                            m.status = 'Progressing'
+                                        } else {
+                                            m.type = 'danger'
+                                            m.status = 'Not Start'
+                                        }
+                                    } else {
+                                        m.type = 'success'
+                                        m.status = 'Progressing'
+                                    }
+                                }
+                            }
+                        })
+                        v.list.sort((a, b) => {
+                            if (a.status == 'Completed' && b.status == 'Completed') {
+                                if (a.startTime && b.startTime) {
+                                    if (new Date(a.startTime) > new Date(b.startTime)) {
+                                        return 1
+                                    } else {
+                                        return -1
+                                    }
+                                } else if (a.startTime) {
+                                    return -1
+                                } else {
+                                    console.log(a)
+                                    return -1
+                                }
+                            } else if (a.status == 'Completed') {
+                                return 1
+                            } else if (b.status == 'Completed') {
+                                return -1
+                            }
+                        })
+                    });
+                    return this.tabs
+                }
+            },
+            methods: {},
+        });
+    </script>
+
+</body>
+
+</html>
