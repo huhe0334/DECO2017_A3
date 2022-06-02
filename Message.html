@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <link rel="stylesheet" href="./css/common.css?v=1" />
+    <link rel="stylesheet" href="./css/message.css?v=1" />
+
+    <!-- External Style Sheets -->
+    <!-- <link href="./js/element.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+</head>
+
+<body>
+    <!-- layout -->
+    <div class="layout" id="app">
+        <div class="pc">
+
+            <!-- aside -->
+            <div class="aside" :class="{'hide': hide}">
+                <img src="./img/logo.png" class="logo" />
+
+                <div class="list">
+                    <a href="./index.html" class="item">
+                        <img src="./img/icon-1.png" />
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="./Books.html" class="item">
+                        <img src="./img/icon-2.png" />
+                        <span>Books</span>
+                    </a>
+                    <a href="./Calendar.html" class="item">
+                        <img src="./img/icon-3.png" />
+                        <span>Calendar</span>
+                    </a>
+                    <a href="./Tasks.html" class="item">
+                        <img src="./img/icon-4.png" />
+                        <span>Tasks</span>
+                    </a>
+                    <a href="./Timer.html" class="item">
+                        <img src="./img/icon-5.png" />
+                        <span>Timer</span>
+                    </a>
+                    <a class="item">
+                        <img src="./img/icon-6.png" />
+                        <span>Notification</span>
+                    </a>
+                    <a href="./Message.html" class="item active">
+                        <img :src="hide ? './img/icon-7.png' : './img/icon-7-1.png'" />
+                        <span>Message</span>
+                    </a>
+
+                    <div class="hr hr1"></div>
+                    <div class="item">
+                        <img src="./img/icon-8.png" />
+                        <span>Setting</span>
+                    </div>
+                    <div class="hr"></div>
+                </div>
+
+                <img src="./img/icon-12.png" class="aside-bg" />
+
+                <img src="./img/icon-9.png" class="aside-bg1" />
+
+                <img src="./img/icon-11.png" class="fold" @click="hide = !hide" />
+            </div>
+
+            <!-- container -->
+            <div class="container">
+                <!-- header -->
+                <div class="header">
+                    <!-- search -->
+                    <div class="search">
+                        <img src="./img/icon-5.png" />
+                        <input type="text" placeholder="Course title or keywords " />
+                        <div class="text">
+                            <span>Courses</span>
+                            <span>▼</span>
+                        </div>
+                    </div>
+
+                    <!-- hello -->
+                    <div class="hello">
+                        <span> Hello, <b>Huanyi</b> </span>
+                        <img src="./img/icon-13.png" />
+                        <img src="./img/icon-14.png" />
+                        <img src="./img/icon-15.png" />
+                        <img src="./img/icon-16.png" />
+                        <span> Huanyi H. </span>
+                    </div>
+                </div>
+
+                <!-- main -->
+                <div class="main">
+                    <div class="top">
+                        <img src="./img/icon-28.png" alt="">
+                        <span>Gina, Mike, Tom</span>
+                        <img src="./img/icon-29.png" alt="">
+                    </div>
+                    <div class="con"></div>
+                    <div class="footer">
+                        <textarea id="mytextarea">Hello, World!</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="phone">
+            <div class="header">
+                <img src="./img/icon-59.png" alt="" srcset="" @click="hide = true" />
+                <img src="./img/icon-60.png" alt="" srcset="" />
+                <p>Gina, Mike, Tom  <span class="el-icon-arrow-down"></span></p>
+                <img src="./img/icon-28.png" alt="" srcset="" />
+            </div>
+
+            <div class="headers" v-if="hide">
+                <div class="top">
+                    <img src="./img/icon-44.png" alt="" srcset="" @click="hide = false" />
+                    <img src="./img/icon-46.png" alt="" srcset="" />
+                    <img src="./img/icon-47.png" alt="" srcset="" />
+                </div>
+                <div class="con">
+                    <div>
+                        <a href="./index.html" class="item"><img src="./img/icon-48.png" alt="" srcset="" /></a>
+                        <a href="./Books.html" class="item"><img src="./img/icon-49.png" alt="" srcset="" /></a>
+                        <a href="./Calendar.html" class="item"><img src="./img/icon-50.png" alt="" srcset="" /></a>
+                    </div>
+                    <div>
+                        <a href="./Tasks.html" class="item"><img src="./img/icon-51.png" alt="" srcset="" /></a>
+                        <a href="./Timer.html" class="item"><img src="./img/icon-52.png" alt="" srcset="" /></a>
+                        <img src="./img/icon-53.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                        <a href="./Message.html" class="item"><img src="./img/icon-54.png" alt="" srcset="" /></a>
+
+                        <p class="search">
+                            <input type="text" />
+                            <img src="./img/icon-55.png" alt="" srcset="" />
+                        </p>
+                    </div>
+                    <div class="qw">
+                        <img src="./img/icon-56.png" alt="" srcset="" />
+                        <img src="./img/icon-57.png" alt="" srcset="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="con"></div>
+
+            <div class="footer">
+                <img src="./img/icon-61.png" alt="" srcset="" />
+                <input type="text" placeholder="Respond…">
+                <img src="./img/icon-62.png" alt="" srcset="" />
+                <img src="./img/icon-63.png" alt="" srcset="" />
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+    <!-- Must import vue first, then use element-ui -->
+    <script src="./js/vue.js"></script>
+    <!-- Import element repository-->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <script src="//unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+
+    <script>
+        ELEMENT.locale(ELEMENT.lang.en)
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                hide: false,
+                value: new Date(),
+                dialogFormVisible: false,
+                form: {
+                    task: "",
+                    time: "",
+                },
+                formLabelWidth: "120px",
+            },
+            methods: {},
+        });
+    </script>
+</body>
+
+</html>
