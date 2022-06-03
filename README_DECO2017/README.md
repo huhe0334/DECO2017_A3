@@ -42,13 +42,13 @@
 ## Functional specification list 
 ![Functional specification list](/Img/Functional_specification_list.png)
 ## References
-2021. [image] Available at: <https://unsplash.com/photos/DP0LMBAIzZQ>.
-2021. [image] Available at: <https://unsplash.com/photos/PGdW_bHDbpI>.
-2021. [image] Available at: <https://unsplash.com/photos/LpbyDENbQQg>.
-2021. [image] Available at: <https://unsplash.com/photos/d2w-_1LJioQ>.
-2016. Available at: <https://music.163.com/#/song?id=421639623&userid=124008189>.
-2016. Available at: <https://music.163.com/#/song?id=439122551&userid=124008189>.
-2005. Available at: <https://music.163.com/#/song?id=480353&userid=124008189>.
+n.d. [image] Available at: <https://unsplash.com/photos/DP0LMBAIzZQ>.
+n.d. [image] Available at: <https://unsplash.com/photos/PGdW_bHDbpI>.
+n.d. [image] Available at: <https://unsplash.com/photos/LpbyDENbQQg>.
+n.d. [image] Available at: <https://unsplash.com/photos/d2w-_1LJioQ>.
+Available at: <https://music.163.com/#/song?id=421639623&userid=124008189>.
+Available at: <https://music.163.com/#/song?id=439122551&userid=124008189>.
+Available at: <https://music.163.com/#/song?id=480353&userid=124008189>.
 #### Plug-in
 [online] Available at: <https://element.eleme.cn/#/zh-CN/component/dialog>.
 Tinymce.ax-z.cn. n.d. [online] Available at: <http://tinymce.ax-z.cn>.
